@@ -5,7 +5,7 @@ spring:
 
 #HTTP Server
 server: 
-  port: 8761
+  port: 1111
 
 #Eureka Configuration Properties
 eureka:
