@@ -14,7 +14,7 @@ node {
         }
 
         stage('Pushing Image') {
-            docker.withRegistry('http://localhost:5000') {
+            docker.withRegistry('http://devnst01.nearshoretechnology.com:5000') {
                 app.push("${env.BUILD_NUMBER}")
                 app.push("latest")
             }
