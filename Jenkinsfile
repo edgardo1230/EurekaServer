@@ -20,10 +20,9 @@ node {
         }
 
         stage('Updating Testing Server') {
-      /*      sshagent (credentials: ['testing-server']) {
-                sh 'ssh -o StrictHostKeyChecking=no -l admin -p 22 devnst01.nearshoretechnology.com /home/admin/update-nst-eureka-server-app.sh $BUILD_NUMBER'
-            }
-        */
+            sshagent (credentials: ['testing-server']) {
+                sh 'ssh -o StrictHostKeyChecking=no -l admin -p 22 devnst01.nearshoretechnology.com /home/admin/script/update-nst-eureka-server-app.sh $BUILD_NUMBER'
+            }       
         }
 
         stage('Running Tests') {
