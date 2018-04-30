@@ -21,7 +21,7 @@ node {
         }
 
         stage('Updating Testing Server') {
-                sh 'ssh admin@devnst01.nearshoretechnology.com '/home/admin/script/update-nst-eureka-server-app.sh''
+                sh 'ssh admin@devnst01.nearshoretechnology.com /home/admin/script/update-nst-eureka-server-app.sh'
         }
 
         stage('Running Tests') {
