@@ -1,6 +1,9 @@
 node {
     def app
-
+    def mvnHome = tool 'maven'
+    env.PATH = "${mvnHome}/bin:${env.PATH}"
+    echo "var mvnHome='${mvnHome}'"
+    echo "var env.PATH='${env.PATH}'"
     try {
 
         stage('Cloning repository') {
