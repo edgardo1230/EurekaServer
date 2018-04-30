@@ -23,7 +23,7 @@ node {
         }
 
         stage('Updating Testing Server') {
-                sh 'ssh admin -p 22 devnst01.nearshoretechnology.com /home/admin/script/update-nst-eureka-server-app.sh $BUILD_NUMBER'
+                sh 'ssh admin@devnst01.nearshoretechnology.com '/home/admin/script/update-nst-eureka-server-app.sh''
         }
 
         stage('Running Tests') {
