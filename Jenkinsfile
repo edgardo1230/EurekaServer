@@ -21,7 +21,7 @@ node {
         }
 
         stage('Updating Testing Server') {
-                sh 'ssh -o StrictHostKeyChecking=no admin@devnst01.nearshoretechnology.com /home/admin/script/update-nst-eureka-server-app.sh'
+                sh 'ssh -o StrictHostKeyChecking=no -l admin  -p 22 devnst01.nearshoretechnology.com  /home/admin/script/update-nst-eureka-server-app.sh'
         }
 
         stage('Running Tests') {
