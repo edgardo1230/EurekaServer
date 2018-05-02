@@ -21,7 +21,7 @@ node {
         }
 
         stage('Updating Testing Server') {
-                sh 'sudo ssh -o StrictHostKeyChecking=no -l admin  -p 22 devnst01.nearshoretechnology.com  "bash -s "< /home/admin/script/update-nst-eureka-server-app.sh $BUILD_NUMBER'
+                sh 'sudo ssh -o StrictHostKeyChecking=no -l admin  -p 22 devnst01.nearshoretechnology.com  "bash -s "< /opt/script/update-nst-eureka-server-app.sh $BUILD_NUMBER'
         }
 
         stage('Running Tests') {
